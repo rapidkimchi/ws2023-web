@@ -1,19 +1,19 @@
 /* color */
-root {
+:root {
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-pink: #fe918d;
-  --color-dark-pinf: #ff6863;
+  --color-dark-pink: #ff6863;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-black: #000000;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
-
+  --color-purple: #e70cca;
+  --color-dark-purple: #b40b9e;
   /* font size */
-
   --font-large: 48px;
   --font-medium: 28px;
   --font-regular: 18px;
@@ -24,6 +24,9 @@ root {
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
+  /* size */
+  --size-border-radius: 4px;
 }
 
 * {
@@ -74,4 +77,37 @@ a {
 ul {
   list-style: none;
   padding-left: 0px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background: var(--color-pink);
+  align-items: center;
+  padding: 16px;
+}
+
+.navbar_menu {
+  display: flex;
+}
+
+.navbar_menu_item {
+  padding: 8px 12px;
+  margin: 0px 4px;
+  color: var(--color-white);
+}
+
+.navbar_logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  cursor: pointer;
+}
+
+.navbar_menu_item.active {
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.navbar_menu_item:hover {
+  background-color: var(--color-dark-pink);
 }
